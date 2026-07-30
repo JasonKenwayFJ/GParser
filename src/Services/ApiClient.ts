@@ -19,4 +19,6 @@ export class HttpClient
 
         return response.data;
     }
+
+    async getImages(url: string): Promise<string[]>
 }
