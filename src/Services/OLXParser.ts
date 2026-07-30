@@ -18,8 +18,6 @@ export class OLXParser {
         return html;
     }
 
-
-
     async getProducts(html: string): Promise<Product[]> {
         const $ = cheerio.load(html);
 
