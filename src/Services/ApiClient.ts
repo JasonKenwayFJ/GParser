@@ -16,9 +16,8 @@ export class HttpClient
     async get(url: string): Promise<string>
     {
         const response = await this.client.get(url);
-
         return response.data;
     }
 
-    async getImages(url: string): Promise<string[]>
+
 }

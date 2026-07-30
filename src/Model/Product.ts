@@ -2,6 +2,9 @@
     id: Guid;
     name: string;
     price: string;
+    image: string;
+    images: string[];
+    category: string;
 }
 
 type Guid = string & { readonly __brand: unique symbol };
