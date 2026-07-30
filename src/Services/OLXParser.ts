@@ -21,7 +21,8 @@ export class OLXParser {
     async getProducts(html: string): Promise<Product[]> {
         const $ = cheerio.load(html);
 
-        const products: Product[] = $("[data-testid='card-title-link']").map((_, element) => {
+        const products: Product[] = $("[data-testid='card-title-link']")
+            .map((_, element) => {
             const card = $(element);
 
             const name = card.find("h4").text().trim();
