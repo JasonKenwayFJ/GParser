@@ -1,4 +1,5 @@
 ﻿import axios, {AxiosInstance, AxiosResponse} from 'axios';
+import {ApiResponse} from "../Model/Product.js";
 
 export class HttpClient
 {
@@ -13,7 +14,7 @@ export class HttpClient
     }
 
 
-    async get(url: string): Promise<string>
+    async get<T>(url: string): Promise<T>
     {
         const response = await this.client.get(url);
         return response.data;
